@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#444444" >
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:padding="10dp" >
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/world_around_me" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/innerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/relativeLayout"
+            android:orientation="vertical"
+            android:padding="10dip" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/eventname"
+                android:textColor="#ffffff" />
+
+            <EditText
+                android:id="@+id/eventname"
+                style="@style/TextFields"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:background="@drawable/rounded_edges"
+                android:focusableInTouchMode="true"
+                android:singleLine="true" >
+
+                <requestFocus />
+            </EditText>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/locationname"
+                android:textColor="#ffffff" />
+
+            <EditText
+                android:id="@+id/eventlocationname"
+                style="@style/TextFields"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:background="@drawable/rounded_edges"
+                android:singleLine="true" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/eventaddress"
+                android:textColor="#ffffff" />
+
+            <EditText
+                android:id="@+id/eventaddress"
+                style="@style/TextFields"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:background="@drawable/rounded_edges"
+                android:inputType="textPostalAddress"
+                android:singleLine="true" />
+
+            <!-- Date Picker -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:text="@string/date"
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:id="@+id/date_format"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:text="@string/date_format"
+                    android:textColor="#ffffff" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/pick_date"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/rounded_edges"
+                android:onClick="showDatePickerDialog"
+                android:singleLine="true"
+                android:text="@string/pick_date" />
+            
+             <!-- Time Picker -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:text="@string/time"
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:id="@+id/time_format"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:text="@string/time_format"
+                    android:textColor="#ffffff" />
+            </LinearLayout>
+            
+            <Button
+                android:id="@+id/pick_time"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/rounded_edges"
+                android:onClick="showDatePickerDialog"
+                android:singleLine="true"
+                android:text="@string/pick_time" />
+
+            <!-- Create Event Button -->
+
+            <Button
+                android:id="@+id/addCreatedEventButton"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/rounded_edges"
+                android:text="@string/updateButton" />
+        </LinearLayout>
+
+        <!-- Progress Bar -->
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/innerLayout"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+</ScrollView>

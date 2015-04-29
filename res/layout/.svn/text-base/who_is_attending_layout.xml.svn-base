@@ -1,0 +1,28 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/MyLinearLayout"
+    style="@style/mapTypesStyle"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#000000"
+    android:orientation="vertical"
+    >
+
+    <ListView
+        android:id="@+id/whosAttendingList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:divider="#ffffff"
+        android:dividerHeight="2dp"
+        android:layout_gravity="center" />
+
+    <TextView
+        android:id="@+id/attendeeName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:gravity="center"
+        android:textColor="#FFF"
+        android:textSize="17sp"
+        android:typeface="serif" />
+
+</LinearLayout>
