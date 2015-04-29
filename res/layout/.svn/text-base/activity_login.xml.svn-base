@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <ScrollView
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     android:id="@+id/ScrollView"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"      
+     android:background="#444444" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#444444" >
+
+        <RelativeLayout            
+            android:id="@+id/logoLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:padding="10dp" >
+
+            <ImageView
+                android:id="@+id/firstNameField"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/world_around_me" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/innerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/logoLayout"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+            <!-- Email Text View -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:textColor="#ffffff" />
+
+            <!-- Email Edit text -->
+
+            <EditText
+                android:id="@+id/usernameField"
+                style="@style/TextFields"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/rounded_edges"
+                android:focusableInTouchMode="true"
+                android:inputType="textEmailAddress"
+                android:singleLine="true" >
+
+                <requestFocus />
+            </EditText>
+
+            <!-- Password Text View -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/password"
+                android:textColor="#ffffff" />
+
+            <!-- Password Edit text -->
+
+            <EditText
+                android:id="@+id/passwordField"
+                style="@style/TextFields"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/rounded_edges"
+                android:password="true"
+                android:singleLine="true" />
+
+            <!-- Login Button -->
+
+            <Button
+                android:id="@+id/loginButton"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rounded_edges"
+                android:text="@string/login" />
+
+            <TextView
+                android:id="@+id/link_to_register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="50dp"
+                android:gravity="center"
+                android:text="@string/registration"
+                android:textColor="#ffffff"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/link_to_forgotPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="@string/forgotPassword"
+                android:textColor="#ffffff"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <!-- Progress Bar -->
+
+        <RelativeLayout
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/innerLayout"
+            android:layout_centerHorizontal="true" >
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</ScrollView>
